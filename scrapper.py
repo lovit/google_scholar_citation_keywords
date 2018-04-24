@@ -116,6 +116,11 @@ def main():
 
             url = (front_url + '&start={}'.format(start))
             page = get_soup(url)
+            if not page:
+                print('Something wrong. Sleep {} secs'.format(error_sleep))
+                time.sleep(error_sleep)
+                continue
+
             divs = page.select('div[class=gs_ri]')
             if not divs or len(divs) == 0:
                 print('Something wrong. Sleep {} secs'.format(error_sleep))
@@ -142,7 +147,7 @@ def main():
 
             print('done with start={}'.format(start), flush=True)
 
-            if start >= 30: # debug code
+            if debug and start >= 30: # debug code
                 break
 
 if __name__ == '__main__':
