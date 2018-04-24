@@ -89,7 +89,7 @@ def main():
                         help='suffix attached after datetime idx. eg: 2018-04-28_03-45-23[suffix]')
     parser.add_argument('--input_file', type=str, default='input.txt',
                         help='file path that contains front urls')
-    parser.add_argument('--sleep', type=int, default=5,
+    parser.add_argument('--sleep', type=int, default=10,
                         help='sleep time [sec] after one page scrapping was done')
     parser.add_argument('--error_sleep', type=int, default=300,
                         help='sleep time [sec] after exception occurs')
@@ -139,6 +139,8 @@ def main():
                               year,
                               clean_text(snippest),
                               n_citations))
+
+            time.sleep(sleep)
             
             f = open('{}{}.txt'.format(output_idx, output_suffix), 'a', encoding='utf-8')
             for info in infos:

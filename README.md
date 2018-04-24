@@ -19,7 +19,7 @@ or default
 | arguments | default | description |
 | --- | --- | --- |
 | input_file | input.txt | Input file. It contains front url and citation numbers |
-| sleep | 5 | Sleep time when a page was scrapped. Preventing Google's block |
+| sleep | 10 | Sleep time when a page was scrapped. Preventing Google's block |
 | error_sleep | 300 | Sleep time when exception occurs |
 | output_suffix | '' | Output file suffix. Output file prefix is scrapping start datetime |
 
