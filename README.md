@@ -9,7 +9,7 @@ Google scholar 에서 관심있는 논문을 citation 한 논문들의 주제를
 
 ### Scrapping
 
-    python scrapper.py --input_file input.txt --sleep 5 --error_sleep 300 --output_suffix tsne
+    python scrapper.py --input_file input.txt --sleep 100 --error_sleep 1800 --output_suffix tsne
 
 or default
 
